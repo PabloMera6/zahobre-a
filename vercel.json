@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/gestion-reservas", "destination": "/index.html" }
+  ]
+}

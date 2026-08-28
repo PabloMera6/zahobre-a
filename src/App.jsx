@@ -8,15 +8,18 @@ import Reservations from "./components/Reservations"
 
 
 function App() {
+  const adminMode = window.location.pathname.replace(/\/+$/, "") === "/gestion-reservas";
+
+  if (adminMode) return <Reservations adminMode />;
 
   return (
     <div>
       <Header />
       <Hero />
-      <Reservations />
       <Product />
       <ImageGallery />
       <Contact />
+      <Reservations />
       <Footer />
     </div>
   )
