@@ -32,4 +32,4 @@ La API devuelve al público solo el apartamento y las fechas de ocupación. Los 
 
 ## Desarrollo local
 
-El proyecto utiliza los comandos habituales de Vite: `npm install`, `npm run dev` y `npm run build`.
+El proyecto utiliza los comandos habituales de Vite: `npm install`, `npm run dev` y `npm run build`..
