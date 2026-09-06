@@ -23,7 +23,6 @@ export default function Header() {
     <header className={`site-header ${scrolled ? "site-header--scrolled" : ""}`}>
       <a className="brand" href="#home" aria-label="Zahobreña, inicio">
         <img src="/logo-white.png" alt="Zahobreña" />
-        <span>Zahobreña</span>
       </a>
 
       <nav className={`site-nav ${open ? "site-nav--open" : ""}`}>
