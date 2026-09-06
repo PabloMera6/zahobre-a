@@ -1,50 +1,36 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css'; // Importa el bundle CSS de Swiper
 import { FaHome } from "react-icons/fa";
 import { MdOutlinePool } from "react-icons/md";
 import { LuParkingCircle } from "react-icons/lu";
 import { BiDrink } from "react-icons/bi";
 
-const Product = () => {
-  return (
-    <div id="product" className="bg-bg">
-      <div className="grid xl:p-20 xl:max-w-[1200px] lg:max-w-[800px] md:max-w-[600px] mx-[2vh] md:mx-auto text-primary-200">
-        <h1 className="text-[40px] font-bold">¿Qué ofrecemos?</h1>
-        {/* Services */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="flex flex-col gap-2 col-span-1 md:col-span-1">
-            <FaHome className="text-4xl p-2 bg-secondary text-primary box-content rounded-xl" />
-            <h3 className="text-[20px] font-bold">Apartamentos turísticos</h3>
-            <p className="text-gray-500">
-              Zahobreña es un complejo de ensueño, con 6 apartamentos turísticos en Zahora, Cádiz. Cada uno de estos apartamentos tiene capacidad para 4 personas y están equipados con todo lo necesario para disfrutar de unas vacaciones inolvidables. Cada unidad cuenta con patio, aire acondicionado, cocina totalmente equipada con microondas y fogones, salón, Smart TV, lavadora y baño con ducha.
-            </p>
-          </div>
-          <div className="flex flex-col gap-2 col-span-1 md:col-span-1">
-            <MdOutlinePool className="text-4xl p-2 bg-secondary text-primary box-content rounded-xl" />
-            <h3 className="text-[20px] font-bold">Piscina al aire libre</h3>
-            <p className="text-gray-500">
-              Se dispone de una piscina al aire libre, rodeada de un jardín con árboles y hamacas. Un lugar perfecto para relajarse y disfrutar del buen tiempo.
-            </p>
-          </div>
-          <div className="flex flex-col gap-2 col-span-1 md:col-span-1">
-            <LuParkingCircle className="text-4xl p-2 bg-secondary text-primary box-content rounded-xl" />
-            <h3 className="text-[20px] font-bold">Parking gratuito</h3>
-            <p className="text-gray-500">
-              Podrá aparcar su coche de manera gratuita durante todo el día en nuestro parking privado. Además, disponemos de una <strong>zona de carga para vehículos eléctricos</strong>.
-            </p>
-          </div>
-          <div className="flex flex-col gap-2 col-span-1 md:col-span-1">
-            <BiDrink className="text-4xl p-2 bg-secondary text-primary box-content rounded-xl" />
-            <h3 className="text-[20px] font-bold">Zona Chill Out</h3>
-            <p className="text-gray-500">
-              Disponemos de una zona Chill Out, con sofás y mesas, donde podrá relajarse y disfrutar de un buen cóctel.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+const features = [
+  { icon: FaHome, number: "01", title: "Apartamentos con alma", text: "Seis apartamentos independientes para cuatro personas, pensados para vivir Zahora sin prisas: cocina equipada, salón, Smart TV, aire acondicionado, patio privado y todo lo que necesitas." },
+  { icon: MdOutlinePool, number: "02", title: "Piscina entre jardines", text: "Un rincón para bajar el ritmo. Piscina al aire libre, árboles, hamacas y espacio para pasar las tardes al sol o al fresco." },
+  { icon: LuParkingCircle, number: "03", title: "Todo fácil", text: "Parking privado gratuito y zona de carga para vehículos eléctricos para que llegues, aparques y te olvides del coche." },
+  { icon: BiDrink, number: "04", title: "Momentos al aire libre", text: "Nuestra zona chill out está hecha para el aperitivo, una copa al atardecer y esas conversaciones que se alargan sin mirar el reloj." },
+];
 
-export default Product;
+export default function Product() {
+  return (
+    <section id="product" className="features-section">
+      <div className="section-intro">
+        <div>
+          <p className="eyebrow">LA ESTANCIA</p>
+          <h2>Un lugar para<br /><em>vivir despacio.</em></h2>
+        </div>
+        <p className="section-lead">Hemos creado Zahobreña para que el alojamiento sea parte de las vacaciones. Arquitectura sencilla, espacios exteriores y una atmósfera tranquila a pocos minutos de las playas de la Costa de la Luz.</p>
+      </div>
+
+      <div className="features-grid">
+        {features.map(({ icon: Icon, number, title, text }) => (
+          <article className="feature-card" key={number}>
+            <div className="feature-top"><span>{number}</span><Icon /></div>
+            <h3>{title}</h3>
+            <p>{text}</p>
+            <span className="feature-line" />
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}

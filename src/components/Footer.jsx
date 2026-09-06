@@ -1,27 +1,14 @@
-import React from "react";
-// Icons
-import { RiGithubLine } from "react-icons/ri";
+import { FaInstagram } from "react-icons/fa";
 
-const Footer = () => {
-    return (
-        <footer className="bg-primary-200 p-5">
-            <div className='grid xl:max-w-[1200px] lg:max-w-[800px] md:max-w-[600px] mx-[2vh] md:mx-auto flex flex-col md:flex-row gap-4 border-b items-center justify-center border-gray-500 pb-8'>
-                {/* Logo */}
-                <div className="flex items-center justify-center h-full ml-[2vh]">
-                    <img 
-                        src="logo.JPG"
-                        className="max-h-16 md:max-h-24 lg:max-h-32 object-cover" 
-                        alt="Logo"
-                    />
-                </div>
-            </div>
-            <div className="mt-10 md:mt-20">
-                <p className="text-gray-300 text-center">
-                    © Zahobreña 2024 - All Rights Reserved
-                </p>
-            </div>
-        </footer>
-    )
+export default function Footer() {
+  return (
+    <footer className="site-footer">
+      <div className="footer-main">
+        <div className="footer-brand"><img src="/logo.JPG" alt="Zahobreña" /><span>Zahobreña</span></div>
+        <div className="footer-links"><a href="#home">Inicio</a><a href="#product">Apartamentos</a><a href="#galeria">Galería</a><a href="#reservas">Reservas</a><a href="#contact">Contacto</a></div>
+        <a className="footer-social" href="https://www.instagram.com/zahobrena/" aria-label="Instagram"><FaInstagram /></a>
+      </div>
+      <div className="footer-bottom"><span>© {new Date().getFullYear()} Zahobreña</span><span>Zahora · Cádiz</span><a href="/gestion-reservas">Área privada</a></div>
+    </footer>
+  );
 }
-
-export default Footer;
