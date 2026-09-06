@@ -1,11 +1,11 @@
 const images = [
-  ["/Zahorabreña Alta-2.jpg", "La llegada", "gallery-tall"],
-  ["/Zahorabreña Alta-4.jpg", "Espacios para compartir", ""],
-  ["/Zahorabreña Alta-10.jpg", "El jardín", "gallery-wide"],
-  ["/Zahorabreña Alta-17.jpg", "Tu apartamento", ""],
-  ["/Zahorabreña Alta-25.jpg", "Días de piscina", "gallery-tall"],
-  ["/Zahorabreña Alta-31.jpg", "Detalles", ""],
-  ["/Zahorabreña Alta-37.jpg", "Atardeceres", "gallery-wide"],
+  ["/zahobrena-alta-4.jpg", "La llegada", "gallery-tall"],
+  ["/zahobrena-alta-33.jpg", "Espacios para compartir", ""],
+  ["/zahobrena-alta-9.jpg", "El jardín", "gallery-wide"],
+  ["/zahobrena-alta-27.jpg", "Tu apartamento", ""],
+  ["/zahobrena-alta-32.jpg", "Días de piscina", "gallery-tall"],
+  ["/zahobrena-alta-17.jpg", "Detalles", ""],
+  ["/zahobrena-alta-34.jpg", "Terraza y exteriores", "gallery-wide"],
 ];
 
 export default function ImageGallery() {
